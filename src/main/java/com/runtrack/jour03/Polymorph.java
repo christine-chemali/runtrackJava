@@ -25,7 +25,7 @@
 
 package com.runtrack.jour03;
 
-class Polymorph 
+public class Polymorph //Ajout de public
 { public static void main(String[] args)
     {
         Forme[] tabFormes = 
@@ -40,7 +40,8 @@ class Polymorph
         //contenant une copie des objets définis
         //dans le tableau tabFormes
         for (int i = 0; i < tabFormes.length; ++i)
-        formes.add(new Forme(tabFormes[i]));
+        //formes.add(new Forme(tabFormes[i])); // A changer par la ligne du dessous
+        formes.add(tabFormes[i].copie()); // Remplace la ligne d'au dessus
         formes.dessine();
     }   
 }
@@ -60,10 +61,18 @@ class Forme
     public void dessine(){
         System.out.println("Une forme " + couleur);
     }
+    public Forme copie() //Ajout
+     {
+    return new Forme(this); //Ajout
+    }
 }
 
 class Triangle extends Forme 
 {
+    public Triangle(Forme autreForm) //Ajout
+    {
+    super(autreForm); //Ajout
+    }
     public Triangle(String uneCouleur)
     {
         super(uneCouleur);
@@ -77,11 +86,19 @@ class Triangle extends Forme
         super.dessine();
         System.out.println("toute pointue");
      }
-
+    @Override //Ajout
+    public Forme copie() //Ajout
+    {
+    return new Triangle(this); //Ajout
+    }
 }
 
 class Cercle extends Forme
 {
+    public Cercle(Forme autreForm) //Ajout
+    {
+    super(autreForm); //Ajout
+    }
     public Cercle(String uneCouleur)
     {
         super(uneCouleur);
@@ -94,6 +111,11 @@ class Cercle extends Forme
     {
         super.dessine();
         System.out.println("toute ronde");
+    }
+    @Override //Ajout
+    public Forme copie() //Ajout
+    {
+    return new Cercle(this); //Ajout
     }
 }
 
@@ -155,4 +177,14 @@ class Collect
  * Cela sera fait dans le code 
  * en commentant ce qui doit être changé ou supprimé
  * 
+ * Pour compiler et executer : .\run.bat jour03.Polymorph
+ * 
+ * Sortie terminal :
+ * 
+ * [INFO] --- exec:3.2.0:java (default-cli) @ runtrackjava ---
+Une forme rouge
+toute ronde
+Une forme jaune
+toute pointue
+[INFO] --------------------------------------------------------
  */
