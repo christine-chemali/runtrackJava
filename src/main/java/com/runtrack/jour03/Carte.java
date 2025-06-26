@@ -40,6 +40,14 @@
 
 package com.runtrack.jour03;
 
-public class Magic {
-    
+// Classe abstraite pour toutes les cartes
+abstract class Carte {
+    protected int cout;
+    public Carte(int cout){
+        this.cout = cout;
+    }
+    public abstract void afficher();
+    public int getCout(){
+        return cout;
+    }   
 }
