@@ -29,7 +29,7 @@
  * d'ajouter une carte au jeu. On supposera qu'un jeu comporte au 
  * plus 10 cartes.Le jeu comportera égalemnt une méthode jouer() 
  * permettant de jouer une carte
- * Pour simplifier on jouera ls cartes dans l'ordre ou
+ * Pour simplifier on jouera les cartes dans l'ordre ou
  * elles sont stockées dans le jeu et on mettra la carte jouée
  * à null dans le jeu de carte.
  * Pour finir, dans la méthode main, constituez un jeu
@@ -125,5 +125,53 @@ class Sortilege extends Carte {
 
     public String getExplication(){
         return explication;
+    }
+}
+
+//Classe pour le jeu de cartes
+class Jeu {
+    private Carte[] cartes;
+    private int nbCartes;
+    private static final int MaxCartes = 10;
+
+    public Jeu(){
+        cartes = new Carte[MaxCartes];
+        nbCartes = 0;
+    }
+
+    public void piocher(Carte carte){
+        if(nbCartes < MaxCartes){
+            cartes[nbCartes] = carte;
+            nbCartes++;
+            System.out.println("Carte ajoutée au jeu !");
+        } else {
+            System.out.println("Le jeu est plein, impossible d'ajouter une carte !");
+        }
+    }
+
+    public void jouer(){
+        for (int i = 0; i < nbCartes; i++) {
+            if (cartes[i] != null){
+                System.out.println("Carte jouée : ");
+                cartes[i].afficher();
+                cartes[i] = null;
+                return;
+            }
+        }
+        System.out.println("Aucune carte à jouer !");
+    }
+
+    public void afficher(){
+        System.out.println("\n========= AFFICHAGE DU JEU =========");
+        System.out.println("Nombre de cartes dans le jeu : " + nbCartes);
+        for (int i = 0; i < nbCartes; i++){
+            if (cartes[i] != null){
+                System.out.println("Carte " + (i  + 1) + " - ");
+                cartes[i].afficher();
+            } else {
+                System.out.println("Carte " + (i + 1) + " - [ Carte Jouée ]");
+            }           
+        }
+        System.out.println("=================================\n");
     }
 }
