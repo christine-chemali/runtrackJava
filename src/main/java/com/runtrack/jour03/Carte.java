@@ -101,3 +101,29 @@ class Creature extends Carte {
         return pointsDeVie;
     }
 }
+
+//Classe pour les cartes sortilèges
+class Sortilege extends Carte {
+    private String nom;
+    private String explication;
+
+    public Sortilege(String nom, String explication, int cout){
+        super(cout);
+        this.nom = nom;
+        this.explication = explication;
+        System.out.println("Création d'une carte de type Sortilège");
+    }
+
+    @Override
+    public void afficher(){
+        System.out.println("Sortilège - Coût : " + cout + "; Nom : " + nom + "; Explication : " + explication);
+    }
+
+    public String getNom(){
+        return nom;
+    }
+
+    public String getExplication(){
+        return explication;
+    }
+}
