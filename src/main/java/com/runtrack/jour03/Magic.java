@@ -166,7 +166,7 @@ class Jeu {
         System.out.println("Nombre de cartes dans le jeu : " + nbCartes);
         for (int i = 0; i < nbCartes; i++){
             if (cartes[i] != null){
-                System.out.println("Carte " + (i  + 1) + " - ");
+                System.out.println("Carte " + (i  + 1) + " : ");
                 cartes[i].afficher();
             } else {
                 System.out.println("Carte " + (i + 1) + " - [ Carte Jouée ]");
@@ -175,3 +175,108 @@ class Jeu {
         System.out.println("=================================\n");
     }
 }
+
+//Classe principale
+public class Magic {
+    public static void main(String[] args){
+        System.out.println("==== CREATION DU JEU DE CARTES MAGIQUES ====\n");
+        Jeu monJeu = new Jeu();
+        System.out.println("---- Ajout des cartes au jeu ----");
+
+        monJeu.piocher(new Terrain('B'));
+        monJeu.piocher(new Terrain('r'));
+        monJeu.piocher(new Terrain('v'));
+
+        monJeu.piocher(new Creature("Dragon Rouge", 8, 6, 5));
+        monJeu.piocher(new Creature("Gobelin", 2, 1, 1));
+        monJeu.piocher(new Creature("Fée", 4, 5, 4));
+
+        monJeu.piocher(new Sortilege("Boule de feu", "Inflige 3 dégats à une cible", 3));
+        monJeu.piocher(new Sortilege("Soin", "Restaure 4 points de vie", 2));
+        monJeu.piocher(new Sortilege("Foudre", "Inflige 1 dégat à toutes les créatures", 1));
+
+        monJeu.afficher();
+
+        //test du système de jeu
+        System.out.println("--- Test du système de jeu ---");
+        monJeu.jouer();
+        monJeu.jouer();
+        monJeu.jouer();
+
+        monJeu.afficher();
+    }
+}
+
+//Pour compiler et executer : .\run.bat jour03.Magic
+
+//Sortie terminal
+// ==== CREATION DU JEU DE CARTES MAGIQUES ====
+
+// ---- Ajout des cartes au jeu ----
+// Création d'une carte de type Terrain
+// Carte ajoutée au jeu !
+// Création d'une carte de type Terrain
+// Carte ajoutée au jeu !
+// Création d'une carte de type Terrain
+// Carte ajoutée au jeu !
+// Création d'une carte de type Créature
+// Carte ajoutée au jeu !
+// Création d'une carte de type Créature
+// Carte ajoutée au jeu !
+// Création d'une carte de type Créature
+// Carte ajoutée au jeu !
+// Création d'une carte de type Sortilège
+// Carte ajoutée au jeu !
+// Création d'une carte de type Sortilège
+// Carte ajoutée au jeu !
+// Création d'une carte de type Sortilège
+// Carte ajoutée au jeu !
+
+// ========= AFFICHAGE DU JEU =========
+// Nombre de cartes dans le jeu : 9
+// Carte 1 : 
+// Terrain - Coût : 0, Couleur : B
+// Carte 2 :
+// Terrain - Coût : 0, Couleur : r
+// Carte 3 :
+// Terrain - Coût : 0, Couleur : v
+// Carte 4 :
+// Créature - Coût : 5; Nom : Dragon Rouge; Dégats : 8; Points de vie : 6
+// Carte 5 :
+// Créature - Coût : 1; Nom : Gobelin; Dégats : 2; Points de vie : 1
+// Carte 6 :
+// Créature - Coût : 4; Nom : Fée; Dégats : 4; Points de vie : 5
+// Carte 7 :
+// Sortilège - Coût : 3; Nom : Boule de feu; Explication : Inflige 3 dégats à une cible
+// Carte 8 :
+// Sortilège - Coût : 2; Nom : Soin; Explication : Restaure 4 points de vie
+// Carte 9 :
+// Sortilège - Coût : 1; Nom : Foudre; Explication : Inflige 1 dégat à toutes les créatures
+// =================================
+
+// --- Test du système de jeu ---
+// Carte jouée :
+// Terrain - Coût : 0, Couleur : B
+// Carte jouée :
+// Terrain - Coût : 0, Couleur : r
+// Carte jouée :
+// Terrain - Coût : 0, Couleur : v
+
+// ========= AFFICHAGE DU JEU =========
+// Nombre de cartes dans le jeu : 9
+// Carte 1 - [ Carte Jouée ]
+// Carte 2 - [ Carte Jouée ]
+// Carte 3 - [ Carte Jouée ]
+// Carte 4 :
+// Créature - Coût : 5; Nom : Dragon Rouge; Dégats : 8; Points de vie : 6
+// Carte 5 :
+// Créature - Coût : 1; Nom : Gobelin; Dégats : 2; Points de vie : 1
+// Carte 6 :
+// Créature - Coût : 4; Nom : Fée; Dégats : 4; Points de vie : 5
+// Carte 7 :
+// Sortilège - Coût : 3; Nom : Boule de feu; Explication : Inflige 3 dégats à une cible
+// Carte 8 :
+// Sortilège - Coût : 2; Nom : Soin; Explication : Restaure 4 points de vie
+// Carte 9 :
+// Sortilège - Coût : 1; Nom : Foudre; Explication : Inflige 1 dégat à toutes les créatures
+// =================================
