@@ -51,3 +51,23 @@ abstract class Carte {
         return cout;
     }   
 }
+
+//Classe pour les cartes terrain
+class Terrain extends Carte {
+    private char couleur;
+
+    public Terrain(char couleur){
+        super(0);
+        this.couleur = couleur;
+        System.out.println("Création d'une carte de type Terrain");
+    }
+
+    @Override
+    public void afficher(){
+        System.out.println("Terrain - Coût : " + cout + ", Couleur : " + couleur);
+    }
+
+    public char getCouleur(){
+        return couleur;
+    }
+}
