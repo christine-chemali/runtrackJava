@@ -71,3 +71,33 @@ class Terrain extends Carte {
         return couleur;
     }
 }
+
+// Classe pour les cartes créatures
+class Creature extends Carte {
+    private String nom;
+    private int degats;
+    private int pointsDeVie;
+
+    public Creature(String nom, int degats, int pointsDeVie, int cout){
+        super(cout);
+        this.nom = nom;
+        this.degats = degats;
+        this.pointsDeVie = pointsDeVie;
+        System.out.println("Création d'une carte de type Créature");
+    }
+
+    @Override
+    public void afficher() {
+        System.out.println("Créature - Coût : " + cout + "; Nom : " + nom + "; Dégats : " + degats + "; Points de vie : " + pointsDeVie);
+    }
+    
+    public String getNom(){
+        return nom;
+    }
+    public int getDegats(){
+        return degats;
+    }
+    public int pointsDeVie(){
+        return pointsDeVie;
+    }
+}
