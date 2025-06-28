@@ -25,6 +25,12 @@ public class job04App extends Application {
 
     @Override
     public void start(Stage primarStage){
+
+        //Créer le FlowPane
+        FlowPane flowPane = new FlowPane();
+        flowPane.setHgap(15);
+        flowPane.setVgap(15);
+        flowPane.setPadding(new javafx.geometry.Insets(20));
         
     }
     
