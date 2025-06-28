@@ -28,5 +28,15 @@ import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 public class job03App extends Application {
+
+    @Override
+    public void start(Stage primaryStage){
+        //Créer le FlowPane
+        FlowPane flowPane = new FlowPane();
+        flowPane.setHgap(10);
+        flowPane.setVgap(10);
+
+    
+    }
     
 }
