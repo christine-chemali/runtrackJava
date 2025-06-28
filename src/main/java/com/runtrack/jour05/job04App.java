@@ -55,6 +55,9 @@ public class job04App extends Application {
         sendButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " +
         "-fx-padding: 10px 20px; -fx-border-radius: 5 px; " +
         "-fx-background-radius: 5px; -fx-font-weight: bold"));
+    
+        //Ajout des composants
+        flowPane.getChildren().addAll(nameLabel, nameField, sendButton);
     }
     
 }
