@@ -58,6 +58,11 @@ public class job04App extends Application {
     
         //Ajout des composants
         flowPane.getChildren().addAll(nameLabel, nameField, sendButton);
+
+        //Créer la scene
+        Scene scene = new Scene(flowPane, 400, 300);
+
+        
     }
     
 }
