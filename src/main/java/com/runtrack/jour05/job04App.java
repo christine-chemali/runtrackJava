@@ -44,7 +44,17 @@ public class job04App extends Application {
         sendButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " +
         "-fx-padding: 10px; -fx-border-radius: 5 px; " + 
         "-fx-background-radius: 5px; -fx-font-weight: bold;");
-        
+
+        //Effet hover sur le bouton
+        sendButton.setOnMouseEntered(e -> 
+        sendButton.setStyle("-fx-background-color: #45a049; -fx-text-fill: white;" + 
+        "-fx-padding: 10px 20px; -fx-border-radius: 5px;" + 
+        "-fx-background-radius: 5px; -fx-font-weight: bold;"));
+
+        sendButton.setOnMouseExited(e ->
+        sendButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " +
+        "-fx-padding: 10px 20px; -fx-border-radius: 5 px; " +
+        "-fx-background-radius: 5px; -fx-font-weight: bold"));
     }
     
 }
