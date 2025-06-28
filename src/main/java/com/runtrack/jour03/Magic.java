@@ -160,6 +160,16 @@ class Jeu {
         }
         System.out.println("Aucune carte à jouer !");
     }
+    public int getNbCartes() {
+    return nbCartes;
+    }
+
+    public Carte getCarte(int index) {
+        if (index >= 0 && index < nbCartes) {
+            return cartes[index];
+        }
+        return null;
+    }
 
     public void afficher(){
         System.out.println("\n========= AFFICHAGE DU JEU =========");
