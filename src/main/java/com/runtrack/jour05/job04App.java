@@ -24,7 +24,7 @@ import javafx.stage.Stage;
 public class job04App extends Application {
 
     @Override
-    public void start(Stage primarStage){
+    public void start(Stage primaryStage){
 
         //Créer le FlowPane
         FlowPane flowPane = new FlowPane();
@@ -62,7 +62,13 @@ public class job04App extends Application {
         //Créer la scene
         Scene scene = new Scene(flowPane, 400, 300);
 
-        
+        //Configurer la fenêtre
+        primaryStage.setTitle("Job 04 - Styles et thèmes");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
     
+    public static void main(String[] args){
+        launch(args);
+    }
 }
