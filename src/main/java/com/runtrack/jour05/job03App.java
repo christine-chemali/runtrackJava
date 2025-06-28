@@ -59,3 +59,4 @@ public class job03App extends Application {
      }
     
 }
+//Pour compiler et executer : .\run.bat jour05.job03App
