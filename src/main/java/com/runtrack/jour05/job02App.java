@@ -23,7 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class jour02App extends Application {
+public class job02App extends Application {
     
     @Override
     public void start(Stage primaryStage) {
@@ -52,4 +52,4 @@ public class jour02App extends Application {
     }
 }
 
-//Pour compiler et executer : .\run.bat jour05.jour02App
+//Pour compiler et executer : .\run.bat jour05.job02App
