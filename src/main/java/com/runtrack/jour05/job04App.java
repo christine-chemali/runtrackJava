@@ -31,6 +31,11 @@ public class job04App extends Application {
         flowPane.setHgap(15);
         flowPane.setVgap(15);
         flowPane.setPadding(new javafx.geometry.Insets(20));
+
+        //Créer les composants
+        Label namLabel = new Label("Nom :");
+        TextField namField = new TextField();
+        Button sendButton = new Button("Envoyer");
         
     }
     
