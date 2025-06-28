@@ -41,6 +41,9 @@ public class job03App extends Application {
         Label nameLabel = new Label("Nom :");
         TextField namField = new TextField();
         Button sendButton = new Button("Envoyer");
+
+        //Ajout des composants au FlowPane
+        flowPane.getChildren().addAll(nameLabel, namField, sendButton);
         
     }
     
