@@ -72,3 +72,5 @@ public class job04App extends Application {
         launch(args);
     }
 }
+
+//Pour compiler et executer : .\run.bat jour05.job04App
