@@ -48,6 +48,14 @@ public class job03App extends Application {
         //Créer la scene
        Scene scene = new Scene(flowPane, 400, 300);
 
+       //Configuration de la fenêtre
+       primaryStage.setTitle("Job 03 - FlowPane");
+       primaryStage.setScene(scene);
+       primaryStage.show();
     }
+
+     public static void main(String[] args){
+        launch(args);
+     }
     
 }
