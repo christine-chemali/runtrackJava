@@ -30,6 +30,17 @@ public class job05App extends Application {
         flowPane.setVgap(15);
         flowPane.setPadding(new javafx.geometry.Insets(20));
 
+        //Creer les composants
+        Label namelabel = new Label("Nom :");
+        TextField nameField = new TextField();
+        Button sendButton = new Button("Envoyer");
+
+        //Créer l'evenement sur le bouton envoyer
+        sendButton.setOnAction(e -> {
+            String name = nameField.getText();
+            System.out.println("Nom entré : " + name);
+        });
+
         
     }
     
