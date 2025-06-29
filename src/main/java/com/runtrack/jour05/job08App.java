@@ -45,7 +45,19 @@ public class job08App extends Application {
         vbox.getChildren().addAll(label1, textField1, textField2, button1);
         tab1.setContent(vbox);
 
-        //
+        //Deuxième onglet - HBox
+        Tab tab2 = new Tab("Panneau Horizontal");
+        HBox hbox = new HBox(15);
+        hbox.setPadding(new javafx.geometry.Insets(20));
+
+        Label label2 = new Label("HBox");
+        Button button2 = new Button("Btn 1");
+        Button button3 = new Button("Btn 2");
+        Button button4 = new Button("Btn 3");
+
+        hbox.getChildren().addAll(label2, button2, button3, button4);
+        tab2.setContent(hbox);
+        
     }
     
 }
