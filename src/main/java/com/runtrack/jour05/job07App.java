@@ -18,6 +18,7 @@ package com.runtrack.jour05;
 
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -51,6 +52,18 @@ public class job07App extends Application {
         //Creer le tableView
         TableView<Person> table = new TableView<>();
 
+        //Creer les colonnes
+        TableColumn<Person, String> nomCol = new TableColumn<>("Nom");
+        nomCol.setCellValueFactory(cellData -> cellData.getValue().nom);
+        nomCol.setPrefWidth(150);
+
+        TableColumn<Person, String> prenomCol = new TableColumn<>("Prénom");
+        prenomCol.setCellValueFactory(cellData -> cellData.getValue().prenom);
+        prenomCol.setPrefWidth(150);
+
+        TableColumn<Person, String> ageCol = new TableColumn<>("Age");
+        ageCol.setCellValueFactory(cellData -> cellData.getValue().age);
+        ageCol.setPrefWidth(100);
         
 
     }
