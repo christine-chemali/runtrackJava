@@ -67,7 +67,11 @@ public class job06App extends Application {
     
         //créer la scene
         Scene scene = new Scene(vbox, 400, 300);
-        
+
+        //Configurer la fenêtre
+        primaryStage.setTitle("job 06 - Listes déroulantes");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
 }
