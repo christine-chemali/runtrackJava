@@ -50,3 +50,22 @@ public class job09App extends Application {
             String name = nameField.getText().trim();
             String ageText = ageField.getText().trim();
             
+            // Validation des données
+            if (name.isEmpty()) {
+                showErrorDialog("Erreur de saisie", "Le nom est obligatoire !");
+                return;
+            }
+            
+            if (!ageText.isEmpty()) {
+                try {
+                    int age = Integer.parseInt(ageText);
+                    if (age < 0 || age > 150) {
+                        showErrorDialog("Erreur de saisie", "L'âge doit être entre 0 et 150 ans !");
+                        return;
+                    }
+                } catch (NumberFormatException ex) {
+                    showErrorDialog("Erreur de saisie", "L'âge doit être un nombre valide !");
+                    return;
+                }
+            }
+            
