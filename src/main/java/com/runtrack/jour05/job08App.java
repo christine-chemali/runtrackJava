@@ -92,6 +92,24 @@ public class job08App extends Application {
         button4.setStyle("-fx-background-color: #9C27B0; -fx-text-fill: white; -fx-padding: 8px;");
         submitButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10px;");
         
+        //Ajout des onglets
+        tabPane.getTabs().addAll(tab1, tab2, tab3);
+
+        //Interdire la fermeture des onglets
+        tab1.setClosable(false);
+        tab2.setClosable(false);
+        tab3.setClosable(false);
+
+        //Créet la scene
+        Scene scene = new Scene(tabPane, 500, 400);
+
+        //Configurer la fenêtre
+        primaryStage.setTitle("job 08 - Panneaux et Onglets");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
-    
+    public static void main(String[] args){
+        launch(args);
+    }
 }
+//Pour compiler et executer : .\run.bat jour05.job08App
