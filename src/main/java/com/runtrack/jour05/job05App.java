@@ -54,7 +54,11 @@ public class job05App extends Application {
 
         //Création de la scene
         Scene scene = new Scene(flowPane, 400, 300);
-        
+
+        //Configuration de la fenêtre
+        primaryStage.setTitle("Job 05 - Gestion d'évenemnents");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
     
