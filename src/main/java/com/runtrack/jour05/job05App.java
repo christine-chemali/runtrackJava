@@ -31,7 +31,7 @@ public class job05App extends Application {
         flowPane.setPadding(new javafx.geometry.Insets(20));
 
         //Creer les composants
-        Label namelabel = new Label("Nom :");
+        Label nameLabel = new Label("Nom :");
         TextField nameField = new TextField();
         Button sendButton = new Button("Envoyer");
 
@@ -41,7 +41,14 @@ public class job05App extends Application {
             System.out.println("Nom entré : " + name);
         });
 
-        
+        //Application des styles
+        flowPane.setStyle("-fx-background-color: #f0f0f0");
+        nameLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333; ");
+        nameField.setStyle("-fx-padding: 8px; -fx-border-radius: 5px; -fx-background-radius: 5px; ");
+        sendButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " + 
+        "-fx-padding: 10 px 20px; -fx-border-radius: 5px; " + 
+        "-fx-background-radius: 5 px; -fx-font-weight: bold;");    
+
     }
     
 }
