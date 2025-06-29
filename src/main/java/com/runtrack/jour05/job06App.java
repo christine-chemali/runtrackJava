@@ -45,6 +45,15 @@ public class job06App extends Application {
         colorCombo.getItems().addAll("Rouge", "Vert", "Bleu", "Jaune", "Violet");
         colorCombo.setPromptText("Choisir une couleur");
 
+        //Creer le bouton OK
+        Button okButton = new Button("OK");
+        okButton.setOnAction(e -> {
+            String selectedItem = itemCombo.getSelectionModel().getSelectedItem();
+            String selectedColor = colorCombo.getSelectionModel().getSelectedItem();
+
+            System.out.println("Element sélectionné : " + (selectedItem != null ? selectedItem : "Aucun"));
+            System.out.println("Couleur sélectionnée : " + (selectedColor != null ? selectedItem : "Aucune"));
+        });
         
     }
     
