@@ -39,14 +39,14 @@ public class job09App extends Application {
         TextField nameField = new TextField();
 
         Label ageLabel = new Label("Age (nombre uniquement) :");
-        TextField adeField = new TextField();
+        TextField ageField = new TextField();
 
         //Bouttons
         Button validateButton = new Button("Valider");
-        Button quiButton = new Button("Quitter");
-        
+        Button quitButton = new Button("Quitter"); 
 
-
-    }
-    
-}
+         // Action sur le bouton Valider
+        validateButton.setOnAction(e -> {
+            String name = nameField.getText().trim();
+            String ageText = ageField.getText().trim();
+            
