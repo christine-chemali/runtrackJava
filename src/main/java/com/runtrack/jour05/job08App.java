@@ -70,6 +70,15 @@ public class job08App extends Application {
         CheckBox newsletterCheck = new CheckBox("S'abonner à la newsletter");
         Button submitButton = new Button("Soumettre");
 
+        //Action sur le boutton soumettre
+        submitButton.setOnAction(e -> {
+            System.out.println("Nom : " + nameField.getText());
+            System.out.println("Email : " + emailField.getText());
+            System.out.println("Newsletter : " + newsletterCheck.isSelected());
+        });
+
+        formBox.getChildren().addAll(nameLabel, nameField, emailLabel, emailField, newsletterCheck, submitButton);
+        tab3.setContent(formBox);
         
     }
     
