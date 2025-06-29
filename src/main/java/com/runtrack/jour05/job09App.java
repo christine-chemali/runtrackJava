@@ -100,3 +100,16 @@ public class job09App extends Application {
                           "-fx-padding: 10px 20px; -fx-border-radius: 5px; " +
                           "-fx-background-radius: 5px; -fx-font-weight: bold;");
         
+        // Ajout des composants
+        vbox.getChildren().addAll(nameLabel, nameField, ageLabel, ageField, 
+                                validateButton, quitButton);
+        
+        // Création de la scène
+        Scene scene = new Scene(vbox, 400, 300);
+        
+        // Configuration de la fenêtre
+        primaryStage.setTitle("Job 09 - Boîtes de dialogue");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    
