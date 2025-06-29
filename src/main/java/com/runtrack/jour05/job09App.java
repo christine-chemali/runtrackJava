@@ -90,3 +90,13 @@ public class job09App extends Application {
             }
         });
         
+        // Application des styles
+        nameLabel.setStyle("-fx-font-weight: bold;");
+        ageLabel.setStyle("-fx-font-weight: bold;");
+        validateButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " +
+                              "-fx-padding: 10px 20px; -fx-border-radius: 5px; " +
+                              "-fx-background-radius: 5px; -fx-font-weight: bold;");
+        quitButton.setStyle("-fx-background-color: #f44336; -fx-text-fill: white; " +
+                          "-fx-padding: 10px 20px; -fx-border-radius: 5px; " +
+                          "-fx-background-radius: 5px; -fx-font-weight: bold;");
+        
