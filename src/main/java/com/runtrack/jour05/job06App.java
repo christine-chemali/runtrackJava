@@ -28,7 +28,10 @@ public class job06App extends Application {
     
     @Override
     public void start(Stage primaryStage){
-        
+        //Créer le VBox
+        VBox vbox = new VBox(15);
+        vbox.setPadding(new javafx.geometry.Insets(20));
+
     }
     
 }
