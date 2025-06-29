@@ -61,6 +61,10 @@ public class job06App extends Application {
         okButton.setStyle("-fx-background-color: #2196F3; -fx-text-fill: white; " + 
         "-fx-padding: 10px 20px; -fx-border-radius: 5px; " + 
         "-fx-backround-radius: 5px; -fx-font-weight: bold; ");
-    }
+
+        //Ajout des composants
+        vbox.getChildren().addAll(itemLabel, itemCombo, colorLabel, colorCombo, okButton);
     
+    }
+
 }
