@@ -64,6 +64,10 @@ public class job07App extends Application {
         TableColumn<Person, String> ageCol = new TableColumn<>("Age");
         ageCol.setCellValueFactory(cellData -> cellData.getValue().age);
         ageCol.setPrefWidth(100);
+
+        //Ajout des colonnes au tableau
+        table.getColumns().addAll(nomCol, prenomCol, ageCol);
+
         
 
     }
