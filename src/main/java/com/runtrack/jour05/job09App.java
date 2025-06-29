@@ -146,3 +146,5 @@ public class job09App extends Application {
         launch(args);
     }
 }
+
+//Pour compiler et commenter : .\run.bat jour05.job09App
