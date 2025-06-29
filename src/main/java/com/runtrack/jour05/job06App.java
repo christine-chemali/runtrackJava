@@ -73,5 +73,9 @@ public class job06App extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
+    
+    public static void main(String[] args){
+        launch(args);
+    }
 }
+//Pour compiler et executer : .\run.bat jour05.job06App
