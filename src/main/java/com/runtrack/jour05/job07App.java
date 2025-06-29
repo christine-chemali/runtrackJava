@@ -18,6 +18,8 @@ package com.runtrack.jour05;
 
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class job07App extends Application {
 
@@ -39,5 +41,13 @@ public class job07App extends Application {
         public String getAge(){ return age.get(); }
     }
 
+    @Override
+    public void start(Stage primaryStage) {
+        //Creer la VBox
+        VBox vbox = new VBox(10);
+        vbox.setPadding(new javafx.geometry.Insets(20));
+        
+
+    }
     
 }
