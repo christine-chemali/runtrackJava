@@ -35,6 +35,17 @@ public class job06App extends Application {
         //Créer les labels
         Label itemLabel = new Label("Sélectionnez un élement :");
         Label colorLabel = new Label("Sélectionnez une couleur :");
+
+        //Créer des ComboBox
+        ComboBox<String> itemCombo = new  ComboBox<>();
+        itemCombo.getItems().addAll("Pomme", "Banane", "Orange", "Fraise", "Raisin");
+        itemCombo.setPromptText("Choisir un fruit");
+
+        ComboBox<String> colorCombo = new ComboBox<>();
+        colorCombo.getItems().addAll("Rouge", "Vert", "Bleu", "Jaune", "Violet");
+        colorCombo.setPromptText("Choisir une couleur");
+
+        
     }
     
 }
