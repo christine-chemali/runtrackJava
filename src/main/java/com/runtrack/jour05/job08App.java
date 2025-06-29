@@ -100,7 +100,7 @@ public class job08App extends Application {
         tab2.setClosable(false);
         tab3.setClosable(false);
 
-        //Créet la scene
+        //Créer la scene
         Scene scene = new Scene(tabPane, 500, 400);
 
         //Configurer la fenêtre
