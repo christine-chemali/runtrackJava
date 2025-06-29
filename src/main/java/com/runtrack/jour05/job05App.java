@@ -49,6 +49,10 @@ public class job05App extends Application {
         "-fx-padding: 10 px 20px; -fx-border-radius: 5px; " + 
         "-fx-background-radius: 5 px; -fx-font-weight: bold;");    
 
+        //Ajout des composants
+        flowPane.getChildren().addAll(nameLabel, nameField, sendButton);
+
+        
     }
     
 }
