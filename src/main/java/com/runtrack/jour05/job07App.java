@@ -18,6 +18,7 @@ package com.runtrack.jour05;
 
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -46,6 +47,10 @@ public class job07App extends Application {
         //Creer la VBox
         VBox vbox = new VBox(10);
         vbox.setPadding(new javafx.geometry.Insets(20));
+
+        //Creer le tableView
+        TableView<Person> table = new TableView<>();
+
         
 
     }
