@@ -17,7 +17,10 @@
 package com.runtrack.jour05;
 
 import javafx.application.Application;
+import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
@@ -68,7 +71,16 @@ public class job07App extends Application {
         //Ajout des colonnes au tableau
         table.getColumns().addAll(nomCol, prenomCol, ageCol);
 
-        
+        //Données d'exemple
+        ObservableList<Person> data = FXCollections.observableArrayList(
+            new Person("Dupont", "Jean", "25"),
+            new Person ("Martin", "Marie", "30"),
+            new Person("Bernard", "Pierre", "35"),
+            new Person("Durand", "Sophie", "28")
+           );
+
+           table.setItems(data);
+
 
     }
     
