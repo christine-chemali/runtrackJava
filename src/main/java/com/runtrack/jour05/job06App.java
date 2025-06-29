@@ -52,15 +52,16 @@ public class job06App extends Application {
             String selectedColor = colorCombo.getSelectionModel().getSelectedItem();
 
             System.out.println("Element sélectionné : " + (selectedItem != null ? selectedItem : "Aucun"));
-            System.out.println("Couleur sélectionnée : " + (selectedColor != null ? selectedItem : "Aucune"));
+            System.out.println("Couleur sélectionnée : " + (selectedColor != null ? selectedColor : "Aucune"));
         });
 
         //Appliquer les styles
         vbox.setStyle("-fx-background-color: #f0f0f0; ");
         itemLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; ");
+        colorLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; ");
         okButton.setStyle("-fx-background-color: #2196F3; -fx-text-fill: white; " + 
         "-fx-padding: 10px 20px; -fx-border-radius: 5px; " + 
-        "-fx-backround-radius: 5px; -fx-font-weight: bold; ");
+        "-fx-background-radius: 5px; -fx-font-weight: bold; ");
 
         //Ajout des composants
         vbox.getChildren().addAll(itemLabel, itemCombo, colorLabel, colorCombo, okButton);
