@@ -75,3 +75,10 @@ public class job09App extends Application {
                           (ageText.isEmpty() ? "" : "\nÂge: " + ageText));
         });
         
+        // Action sur le bouton Quitter avec confirmation
+        quitButton.setOnAction(e -> {
+            if (showConfirmDialog("Confirmation", "Êtes-vous sûr de vouloir quitter l'application ?")) {
+                primaryStage.close();
+            }
+        });
+        
