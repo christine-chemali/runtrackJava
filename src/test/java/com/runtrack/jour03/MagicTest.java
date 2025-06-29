@@ -44,3 +44,4 @@ public class MagicTest {
         assertEquals(10, jeu.getNbCartes()); 
     }
 }
+// pour compiler et executer : .\test.bat jour03.MagicTest

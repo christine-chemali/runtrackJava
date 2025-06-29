@@ -40,15 +40,15 @@ public class job05App extends Application {
             String name = nameField.getText();
             System.out.println("Nom entré : " + name);
         });
-
-        //Application des styles
-        flowPane.setStyle("-fx-background-color: #f0f0f0");
-        nameLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333; ");
-        nameField.setStyle("-fx-padding: 8px; -fx-border-radius: 5px; -fx-background-radius: 5px; ");
-        sendButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " + 
-        "-fx-padding: 10 px 20px; -fx-border-radius: 5px; " + 
-        "-fx-background-radius: 5 px; -fx-font-weight: bold;");    
-
+        
+        // Application des styles
+        flowPane.setStyle("-fx-background-color: #f0f0f0;");
+        nameLabel.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333;");
+        nameField.setStyle("-fx-padding: 8px; -fx-border-radius: 5px; -fx-background-radius: 5px;");
+        sendButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; " +
+                           "-fx-padding: 10px 20px; -fx-border-radius: 5px; " +
+                           "-fx-background-radius: 5px; -fx-font-weight: bold;");
+        
         //Ajout des composants
         flowPane.getChildren().addAll(nameLabel, nameField, sendButton);
 
@@ -59,7 +59,10 @@ public class job05App extends Application {
         primaryStage.setTitle("Job 05 - Gestion d'évenemnents");
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
     
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
+//Pour compiler et executer : .\run.bat jour05.job05App
