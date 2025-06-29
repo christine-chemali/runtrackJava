@@ -57,6 +57,19 @@ public class job08App extends Application {
 
         hbox.getChildren().addAll(label2, button2, button3, button4);
         tab2.setContent(hbox);
+
+        //Troisième onglet - formulaire
+        Tab tab3 = new Tab("Formulaire");
+        VBox formBox = new VBox(10);
+        formBox.setPadding(new javafx.geometry.Insets(20));
+
+        Label nameLabel = new Label("Nom :");
+        TextField nameField = new TextField();
+        Label emailLabel = new Label("Email :");
+        TextField emailField = new TextField();
+        CheckBox newsletterCheck = new CheckBox("S'abonner à la newsletter");
+        Button submitButton = new Button("Soumettre");
+
         
     }
     
