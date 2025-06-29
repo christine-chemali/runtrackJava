@@ -65,6 +65,9 @@ public class job06App extends Application {
         //Ajout des composants
         vbox.getChildren().addAll(itemLabel, itemCombo, colorLabel, colorCombo, okButton);
     
+        //créer la scene
+        Scene scene = new Scene(vbox, 400, 300);
+        
     }
 
 }
