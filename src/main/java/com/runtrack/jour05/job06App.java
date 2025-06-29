@@ -32,6 +32,9 @@ public class job06App extends Application {
         VBox vbox = new VBox(15);
         vbox.setPadding(new javafx.geometry.Insets(20));
 
+        //Créer les labels
+        Label itemLabel = new Label("Sélectionnez un élement :");
+        Label colorLabel = new Label("Sélectionnez une couleur :");
     }
     
 }
