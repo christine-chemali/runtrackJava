@@ -79,6 +79,18 @@ public class job08App extends Application {
 
         formBox.getChildren().addAll(nameLabel, nameField, emailLabel, emailField, newsletterCheck, submitButton);
         tab3.setContent(formBox);
+
+        //Application des styles
+                label1.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        label2.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        nameLabel.setStyle("-fx-font-weight: bold;");
+        emailLabel.setStyle("-fx-font-weight: bold;");
+        
+        button1.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8px;");
+        button2.setStyle("-fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 8px;");
+        button3.setStyle("-fx-background-color: #FF9800; -fx-text-fill: white; -fx-padding: 8px;");
+        button4.setStyle("-fx-background-color: #9C27B0; -fx-text-fill: white; -fx-padding: 8px;");
+        submitButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10px;");
         
     }
     
