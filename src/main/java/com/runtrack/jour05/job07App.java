@@ -21,6 +21,7 @@ import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -88,10 +89,21 @@ public class job07App extends Application {
         exportButton.setStyle("-fx-background-color: #FF9800; -fx-text-fill: white; " +
                              "-fx-padding: 10px 20px; -fx-border-radius: 5px; " +
                              "-fx-background-radius: 5px; -fx-font-weight: bold;");
+
+        //Ajouter les composants
+        vbox.getChildren().addAll(table, exportButton);
+
+        //Créer la scene
+        Scene scene = new Scene(vbox, 500, 400);
+
+        //Configuration de la fenêtre
+        primaryStage.setTitle("Job 07 - Tableau avec export CSV");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
      private void exportToCSV(ObservableList<Person> data) {
-        
+
      }
     
 }
