@@ -69,3 +69,9 @@ public class job09App extends Application {
                 }
             }
             
+            // Si tout est valide
+            showInfoDialog("Succès", "Données validées avec succès !\n" +
+                          "Nom: " + name + 
+                          (ageText.isEmpty() ? "" : "\nÂge: " + ageText));
+        });
+        
