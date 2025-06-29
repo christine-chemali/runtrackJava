@@ -82,3 +82,11 @@ public class job09App extends Application {
             }
         });
         
+        // Gestion de la fermeture de la fenêtre
+        primaryStage.setOnCloseRequest(e -> {
+            e.consume(); // Empêche la fermeture directe
+            if (showConfirmDialog("Confirmation", "Êtes-vous sûr de vouloir quitter l'application ?")) {
+                primaryStage.close();
+            }
+        });
+        
